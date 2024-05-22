@@ -40,7 +40,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["stubborn"]))
+@bot.on_message(filters.command(["atharv"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️')
     input: Message = await bot.listen(editable.chat.id)
@@ -144,7 +144,7 @@ async def account_login(bot: Client, m: Message):
 
             elif '/master.mpd' in url:
              id =  url.split("/")[-2]
-             url =  "https://penpencilvod.pc.cdn.bitgravity.com" + id + "/master.m3u8"
+             url =  "https://penpencilvod.pc.cdn.bitgravity.com/" + id + "/master.m3u8"
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             name = f'{str(count).zfill(3)}) {name1[:60]}'
