@@ -31,7 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /Atharvpro")
+    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /atharvpro")
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
@@ -40,7 +40,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["atharv"]))
+@bot.on_message(filters.command(["atharvpro"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️')
     input: Message = await bot.listen(editable.chat.id)
@@ -108,12 +108,12 @@ async def account_login(bot: Client, m: Message):
         MR = highlighter 
     else:
         MR = raw_text3
-        
-   await editable.edit("Now send the Thumb url/nEg » https://graph.org/file/3d4562c52f26a50809325.jpg \n Or if don't want thumbnail send = no")
-   input6 = message = await bot.listen(editable.chat.id)
-   raw_text6 = input6.text
-   await input6.delete(True)
-   await editable.delete()
+   
+    await editable.edit("Now send the Thumb url/nEg » https://graph.org/file/3d4562c52f26a50809325.jpg \n Or if don't want thumbnail send = no")
+    input6 = message = await bot.listen(editable.chat.id)
+    raw_text6 = input6.text
+    await input6.delete(True)
+    await editable.delete()
 
     thumb = input6.text
     if thumb.startswith("http://") or thumb.startswith("https://"):
