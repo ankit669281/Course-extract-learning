@@ -108,11 +108,12 @@ async def account_login(bot: Client, m: Message):
         MR = highlighter 
     else:
         MR = raw_text3
+        
    await editable.edit("Now send the Thumb url/nEg » https://graph.org/file/3d4562c52f26a50809325.jpg \n Or if don't want thumbnail send = no")
-    input6 = message = await bot.listen(editable.chat.id)
-    raw_text6 = input6.text
-    await input6.delete(True)
-    await editable.delete()
+   input6 = message = await bot.listen(editable.chat.id)
+   raw_text6 = input6.text
+   await input6.delete(True)
+   await editable.delete()
 
     thumb = input6.text
     if thumb.startswith("http://") or thumb.startswith("https://"):
