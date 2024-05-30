@@ -109,19 +109,17 @@ async def account_login(bot: Client, m: Message):
     else:
         MR = raw_text3
    
-    await editable.edit("Now send the Thumb url/nEg » https://graph.org/file/3d4562c52f26a50809325.jpg \n Or if don't want thumbnail send = no")
-    input6 = message = await bot.listen(editable.chat.id)
-    raw_text6 = input6.text
+    await editable.edit("Now send the **Thumb url**\nEg : `https://telegra.ph/file/15d338d5d116a1e591a10.jpg`\n\nor Send `no`")
+    input6: Message = await bot.listen(editable.chat.id, filters.user(m.from_user.id))
     await input6.delete(True)
     await editable.delete()
-
     thumb = input6.text
+    
     if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
     else:
         thumb == "no"
-
     if len(links) == 1:
         count = 1
     else:
